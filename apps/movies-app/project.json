@@ -16,6 +16,14 @@
       "command": "surge dist/apps/movies-app/browser ${SURGE_DOMAIN} --token ${SURGE_TOKEN}",
       "dependsOn": [
         "build"
+      ],
+      "inputs": [
+        {
+          "externalDependencies": [
+            "nx",
+            "surge"
+          ]
+        }
       ]
     },
     "build": {

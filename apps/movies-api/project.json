@@ -9,6 +9,11 @@
   ],
   "targets": {
     "deploy": {
+      "inputs": [
+        {
+          "runtime": "fly version"
+        }
+      ],
       "executor": "@nx-workshop/internal-plugin:fly-deploy",
       "outputs": [],
       "options": {
@@ -24,6 +29,11 @@
       ]
     },
     "build": {
+      "inputs": [
+        {
+          "env": "MY_SECRET"
+        }
+      ],
       "configurations": {
         "development": {},
         "production": {
