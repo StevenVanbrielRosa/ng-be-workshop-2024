@@ -9,6 +9,11 @@
   ],
   "targets": {
     "deploy": {
+      "inputs": [
+        {
+          "runtime": "fly version"
+        }
+      ],
       "executor": "@nx-workshop/internal-plugin:fly-deploy",
       "outputs": [],
       "options": {
